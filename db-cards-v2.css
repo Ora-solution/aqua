@@ -1,0 +1,62 @@
+.db2_container {
+    background-color: rgb(237, 102, 71);
+    color: white;
+    float: left;
+    height: 120px;
+    margin-right:1%;
+    padding: 5px;
+    position: relative;
+    width: 24%;
+}
+
+.db2_icon_container {
+    height: 100%;
+    left: 0;
+    padding-top: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 80px;
+}
+
+.db2_red {
+    background-color: rgb(217, 83, 79);
+	/*border: 2px solid rgb(187, 93, 72);*/
+}
+.db2_blue {
+    background-color: rgb(51, 122, 183);
+	/*border: 2px solid rgb(45, 106, 141);*/
+}
+.db2_green {
+    background-color: rgb(92, 184, 92);
+	/*border: 2px solid rgb(96, 158, 114);*/
+}
+.db2_orange {
+    background-color: rgb(240, 173, 78);
+	/*border: 2px solid rgb(247, 202, 57);*/
+}
+.db2_main {
+    border-left: 1px solid white;
+    left: 80px;
+    padding: 0 10px;
+    position: absolute;
+    top: 5px;
+    height:110px;
+}
+
+.db2_number {
+    font-size: 1.8em;
+    padding: 10px 0 5px;
+}
+
+.db2_container i {
+    font-size: 50px;
+}
+.db2_text {
+    font-size: 0.8em;
+    line-height: 1.1em;
+}
+
+.db2_title, .db2_text {
+ 	padding: 4px 0px;
+}

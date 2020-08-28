@@ -1,0 +1,401 @@
+/*!
+ * SMART4Apex Bootstrap theme for Oracle Application Express v2.0
+ * Copyright 2014 SMART4Apex
+ * Licensed under MIT
+ */
+
+/* change display items of checkboxes and radio to Bootstrap kind*/
+span.display_only {
+    display:block;
+}
+
+/* change labels of checkboxes and radio to Bootstrap kind*/ 
+fieldset label {
+    font-weight: normal;
+}
+
+/*div#apex-dev-toolbar{ display: none; }/**/
+a.btn {
+    margin: 1px 2px;
+}
+
+div.bs-docs-subsection div.bs-docs-subsectioncontent h3[id^=overview] {
+  display: none
+}
+
+iframe.modaliframe{
+    border: none;
+}
+
+/* let the error-message float on top of the page*/
+#uNotificationMessage {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+/* no bullets on the list-item in error message*/
+#uNotificationMessage > div > ul > li {
+    list-style-type: none;
+}
+
+/*put margin between error title and error message*/
+.htmldbUlErr {
+    margin-left:0px;  
+    margin-top:10px;
+    font-weight: normal;
+}
+
+/*put a width of 500px on the succes notification*/
+div[data-growl="container"] {
+        width:500px;   
+}
+
+/* add a small margin to the right of input items, specially for inline forms*/
+input, .checkbox_group label {
+    margin-right: 5px !important;
+}
+
+/* overrule the default behaviour for HR tags when an alignment is rendered by apex */
+th[align="right"] { text-align: right; }
+th[align="left"] { text-align: left; }
+
+.table-responsive {
+  width: 100%;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border: 1px solid #ddd;
+}
+
+td.pagination, ul.pagination {
+    margin: 0;
+}
+
+/* Overrule Interactivereport submenu padding */
+#apexir_SEARCH {
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+}
+
+.apexir_WORKSHEET_DATA{ width: 100%; }
+.apexir_SEARCH input { display: inline; width: auto;}
+.apexir_SEARCH { float: left; white-space: nowrap; }
+.apexir_WORKSHEET_DATA th {
+    background: none;
+    line-height: 20px;
+    padding: 8px 0px 8px 0px;
+    text-align: left;
+    vertical-align: top;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.apexir_WORKSHEET_DATA th div {
+    color: #333333;
+    text-decoration: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.apexir_WORKSHEET_DATA tr.even td {
+    background-color: #FFFFFF;
+    line-height: 20px;
+    padding: 8px 8px 8px 8px;
+    text-align: left;
+    vertical-align: top;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.apexir_WORKSHEET_DATA tr.odd td {
+    background-color: #FFFFFF;
+    line-height: 20px;
+    padding: 8px 8px 8px 8px;
+    text-align: left;
+    vertical-align: top;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.apexir_WORKSHEET_DATA th td{
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.apexir_WORKSHEET_DATA tbody tr th div { text-transform:uppercase; }
+
+/* ===================================================== 
+
+style definitions special for the Documentation site 
+
+=====================================================
+*/
+.bs-example {
+    background-color: #FFFFFF;
+    border-color: #DDDDDD;
+    border-radius: 4px 4px 0 0;
+    border-width: 1px;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+.bs-example:after {
+    color: #BBBBBB;
+    content: "Example";
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+
+/* CSS for overruling navigation list */
+.bs-docs-sidebar .nav > li > a {
+    color: #999999;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 20px;
+}
+
+.bs-docs-sidebar > .nav > .active > a {
+    background-color: rgba(0, 0, 0, 0);
+    border-left: 2px solid #E21026;
+    color: #E21026;
+    font-weight: 700;
+    padding-left: 18px;
+}
+
+.bs-docs-sidebar .nav > .active > a, .bs-docs-sidebar .nav > .active:hover > a, .bs-docs-sidebar .nav > .active:focus > a {
+    background-color: rgba(0, 0, 0, 0);
+    border-left: 2px solid #E21026;
+    color: #E21026;
+    font-weight: 700;
+    padding-left: 18px;
+}
+
+
+.bs-docs-sidebar .nav .nav {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.bs-docs-sidebar .nav > .active > ul {
+    display: block;
+}
+
+.bs-docs-sidebar .nav .nav > li > a {
+    font-size: 12px;
+    font-weight: 400;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-top: 1px;
+}
+
+.affix{
+    top: 10px; 
+}
+
+/* CSS for FLUID content */    
+.bs-docs-masthead, .bs-docs-header {
+    background-color: #032370;
+    background-image: linear-gradient(to bottom, #032370 0px, #0F4E93 100%);
+    background-repeat: repeat-x;
+    color: #4FA1F2;
+    padding: 30px 15px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.carbonad {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 210px !important;
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-radius: 4px 4px 4px 4px;
+    border-width: 1px !important;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border-color: #0F4E93 !important;
+    border-image: none !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    font-size: 13px !important;
+    height: auto !important;
+    margin-top: 30px !important;
+    margin-right: 200px !important;
+    overflow: hidden;
+    padding: 20px !important;
+    background-color: #FFFFFF !important;           
+}
+
+.bs-docs-header h1, .bs-docs-header p {
+    margin-right: 380px;
+}
+
+.bs-docs-header h1 {
+    font-size: 60px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.bs-docs-header p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+header.navbar {margin-bottom: 0px !important;}
+
+/* ===================================================== 
+
+style definitions special for boxed region
+
+=====================================================
+*/ 
+.box-shadow {
+    background: none repeat scroll 0 0 #F7F8F9;
+    margin: 10px 0;
+    padding: 3px;
+}
+
+.box-background {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CACACA;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 15px;
+}
+
+/* ===================================================== 
+
+style definitions special for callout region
+
+=====================================================
+*/     
+/* Base styles (regardless of theme) */
+.bs-callout {
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+}
+.bs-callout h3 {
+    margin-top: 0;
+}
+
+.bs-callout-danger h3 {
+    color: #B94A48;
+}
+
+.bs-callout-warning h3 {
+    color: #C09853;
+}
+
+.bs-callout-info h3 {
+    color: #3A87AD;
+}
+
+.bs-callout-success h3 {
+    color: #3C763D;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.bs-callout code,
+.bs-callout .highlight {
+    background-color: #fff;
+}
+
+/* Themes for different contexts */
+.bs-callout-danger {
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+}
+.bs-callout-warning {
+    background-color: #fefbed;
+    border-color: #f1e7bc;
+}
+.bs-callout-info {
+    background-color: #f0f7fd;
+    border-color: #d0e3f0;
+}
+.bs-callout-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.icon-bar {border: 1px solid #428bca;}
+.hideMeButHearMe {display:none;}
+
+/* ===================================================== 
+
+style definitions special for item groups and button groups
+
+=====================================================
+*/ 
+.s4atb-input-group .btn {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.s4atb-input-group input[type="checkbox"] { 
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.s4atb-input-group {
+  margin-bottom: 15px;
+}
+
+.s4atb-button-group a {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ 
+/* ===================================================== 
+
+style definitions special for Help
+
+=====================================================
+*/ 
+.s4atb-help {
+  border: 2px dashed #583F7E;
+}
+
+.s4atb-help:hover {
+  cursor:help
+}
+
+/* ===================================================== 
+
+style definitions special for Nav
+
+=====================================================
+*/ 
+ul.nav{
+    margin-left: 0;
+}

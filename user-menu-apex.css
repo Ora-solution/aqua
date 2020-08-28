@@ -1,0 +1,197 @@
+.PROF_DID :focus {
+    outline: none !important
+}
+
+.PROF_DID .t-DialogRegion-buttons{
+    background-color: #FBFBFB;
+}
+
+.PROF_DID .t-Button.t-Button--header:active, 
+.PROF_DID .t-Button.t-Button--header:focus:active {
+    background-color: rgba(0, 0, 0, 0)  !important;
+}
+.PROF_DID .t-Button.t-Button--header:focus:before, 
+.PROF_DID .t-Button.t-Button--header:active:focus:before {
+    box-shadow: none !important;
+}
+.PROF_DID .t-Button.t-Button--header:hover {
+    background-color: rgba(0,0,0,0);
+    box-shadow: none !important;
+}
+
+
+/*
+.image_icon {
+   background-image:url(pierrealli/r/123868/files/static/v99/imagep.png);
+   background-repeat: none !important;
+    background-repeat: no-repeat !important;
+    background-size: 40px;
+    border-radius: 50px;
+    padding-bottom: 16px;
+}
+*/
+
+.PROF_DID.ui-widget.ui-dialog {
+  right:7px !important;
+  left:initial !important;
+  float:right !important;
+  top:40px !important;
+  border-radius:0px !important;
+  border: 1px solid #c4ced7 !important;
+  border-top: 0px !important;
+  box-shadow:rgba(0,0,0,.1) 0 0.4rem 1.6rem !important;
+}
+
+
+
+.PROF_DID.ui-dialog{
+    width:320px !important;
+    height:241px !important;
+}
+
+#exitpopup_bg {
+    width:320px !important;
+    height:241px !important;
+}
+
+#exitpopup_bg .t-DialogRegion-bodyWrapperOut {
+    background-color: #3c8dbc;
+}
+
+#exitpopup_bg .t-DialogRegion-body {
+    background-color: #edeff2;
+}
+
+.PROF_DID.ui-dialog .ui-dialog-titlebar {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: none;
+}
+
+
+
+.PROF_DID .a-MediaBlock.a-Menu-content {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.PROF_DID .a-Header-accountDialog .a-MediaBlock-graphic {
+    margin-right: 16px;
+}
+.PROF_DID .a-MediaBlock-graphic {
+    float: left;
+    margin-right: 8px;
+}
+.PROF_DID .a-Header-accountDialog .a-Header-userPhoto--large {
+    background-color: #F8F8F8;
+}
+.PROF_DID .a-Header-userPhoto {
+    box-shadow: 0 0 0 1px #B0B0B0 inset;
+}
+.PROF_DID .a-Header-userPhoto {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+	border: 1px solid #adaeaf;
+}
+.PROF_DID .a-Header-accountDialog.a-Menu .a-Menu-label {
+    padding: 0;
+}
+.PROF_DID .a-Header-accountDialog.a-Menu .a-Menu-item {
+    display: inherit;
+    color: inherit;
+    line-height: inherit;
+    float: none;
+}
+.PROF_DID .a-Header-accountDialog-editProfile.a-Menu-item.a-Menu-label {
+    text-align: center;
+}
+.PROF_DID .a-Header-accountDialog-editProfile.a-Menu-item.a-Menu-label, 
+.PROF_DID .a-Menu-content .a-Header-dialogLink.a-Menu-item .a-Menu-label {
+    display: block;
+    margin-top: 4px;
+    color: #146fb8;
+}
+.PROF_DID .a-Header-accountDialog-editProfile.a-Menu-item.a-Menu-label, 
+.PROF_DID .a-Header-dialogLink.a-Menu-item .a-Menu-label {
+    font-size: 11px;
+    line-height: 16px;
+    padding: 0;
+    border-radius: 2px;
+    transition: none;
+}
+.PROF_DID .a-Header-accountDialog .a-MediaBlock-content {
+    padding: 4px 0;
+}
+.PROF_DID .a-Header-userPhoto--large, 
+.PROF_DID .a-Header-userPhoto--large .a-Icon, 
+.PROF_DID .a-Header-userPhoto--large img {
+    width: 64px;
+    height: 64px;
+}
+.PROF_DID .a-Header-dialogName {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+}
+.PROF_DID .a-Header-dialogText {
+    display: block;
+    /*line-height: 16px;*/
+}
+.PROF_DID .a-Header-photoPlaceholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15)inset;
+}
+.PROF_DID .a-Header-accountDialog.a-Menu .a-Menu-item {
+    display: inherit;
+    color: inherit;
+    line-height: inherit;
+    float: none;
+}
+.PROF_DID .a-Header-accountDialog.a-Menu .a-MediaBlock-content .a-Menu-item.a-Menu-label {
+    cursor: default;
+}
+.PROF_DID .a-Header-dialogUsername {
+    font-size: 11px;
+    font-weight: 400;
+}
+.PROF_DID .a-Header-dialogLabel, 
+.PROF_DID .a-Header-dialogUsername {
+    color: #777;
+}
+.PROF_DID .a-Header-dialogLabel {
+    margin-top: 16px;
+    line-height: 10px;
+    font-size: 9px;
+    text-transform: uppercase;
+    display: block;
+}
+.PROF_DID .a-Header-dialogValue {
+    font-size: 12px;
+    line-height: 16px;
+}
+.PROF_DID .a-Header-dialogName, 
+.PROF_DID .a-Header-dialogValue {
+    color: #404040;
+}
+.PROF_DID .profile-icon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: baseline;
+    cursor: pointer;
+    border-radius: 100%;
+    margin-right: 5px;
+}
