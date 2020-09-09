@@ -477,8 +477,10 @@ function IGremoveExtraLines(RegionName, colNmae, colType) {
 function CallReport(pRptName, pRptPath, pRptType, paraList){
     
     // Initilized Params Value
-    var pHostLoc = 'http://awnrps.awnbt.com:9002/reports/rwservlet?';
-    var url = pHostLoc + 'AwnErpRpts' + $v("P0_S0001_ID") + pRptType + '&report=' + pRptPath;  
+    //var pHostLoc = 'http://awnrps.awnbt.com:9002/reports/rwservlet?';
+	//var url = pHostLoc + 'AwnErpRpts' + $v("P0_S0001_ID") + pRptType + '&report=' + pRptPath;
+	var pHostLoc = 'http://reports.awnbt.com:7778/reports/rwservlet?';
+    var url = pHostLoc + 'PakTechErpRpts' + $v("P0_S0001_ID") + pRptType + '&report=' + pRptPath;
     
     
     // Add Report Name Comp and Unit
