@@ -452,7 +452,7 @@ function igSelectFirstRecord(RegionName) {
 
         if (!view.getSelectedRecords() || view.getSelectedRecords().length === 0) {
             arr = [];
-			arr.push(apex.region(RegionName).widget().interactiveGrid("getViews", "grid").model.getRecord(model._data[0][0]));
+			arr.push(apex.region(RegionName).widget().interactiveGrid("getViews", "grid").model.getRecord(view.model._data[0][0]));
 			view.setSelectedRecords(arr, true);
         }
     }
