@@ -426,6 +426,7 @@ function revalidateIG(igRegionID) {
     }
 }
 
+/*
 function igSelectFirstRecord(RegionName) {
 	var ig$ = apex.region(RegionName).widget();
 	var el$, view = ig$.interactiveGrid("getCurrentView");
@@ -441,6 +442,22 @@ function igSelectFirstRecord(RegionName) {
         }
     }
 }
+*/
+function igSelectFirstRecord(RegionName) {
+	var ig$ = apex.region(RegionName).widget();
+	var el$, view = ig$.interactiveGrid("getCurrentView");
+
+    if (view.supports.selection) { // view must support selection
+        // only if something not already selected
+
+        if (!view.getSelectedRecords() || view.getSelectedRecords().length === 0) {
+            arr = [];
+			arr.push(apex.region(RegionName).widget().interactiveGrid("getViews", "grid").model.getRecord(model._data[0][0]));
+			view.setSelectedRecords(arr, true);
+        }
+    }
+}
+
 
 function IGremoveExtraLines(RegionName, colNmae, colType) {
     var ig$, model, skipped = [],
