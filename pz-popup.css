@@ -1,0 +1,97 @@
+/* Popup container - can be anything you want */
+
+.pz-popup {
+	position: relative;
+	display: inline-grid;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+/* The actual popup */
+
+.pz-popup .pz-popuptext {
+	visibility: hidden;
+	width: 180px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+	margin-left: -80px;
+	display: none;
+}
+
+.pz-popup .pz-popuptext table {
+	border-spacing: initial;
+	margin: 2px 6px;
+}
+
+.pz-popup .pz-popuptext td {
+	background-color: #555 !important;
+	min-width: 30px;
+	border: 1px solid #ddd;
+	text-align: start;
+	padding: 4px;
+}
+
+
+/* Popup arrow */
+
+.pz-popup .pz-popuptext::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.pz-popup .pz-popuptext.top::after {
+	top: 100%;
+	border-color: #555 transparent transparent transparent;
+}
+
+.pz-popup .pz-popuptext.bottom::after {
+	bottom: 100%;
+	border-color: transparent transparent #555 transparent;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.pz-popup .show {
+	display: inherit;
+	visibility: visible;
+	/*-webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;*/
+}
+
+.pz-popup.show .pz-popuptext {
+	display: inherit;
+}
+
+.pz-popup .pz-popuptext.top {
+	bottom: 125%;
+}
+
+.pz-popup .pz-popuptext.bottom {
+	top: 125%;
+}
+
+.pz-popup .pz-popuptext.left {
+	left: 10px;
+	margin: 0;
+}
+
+.pz-popup .pz-popuptext.right {
+	right: 10px;
+	left: auto;
+	margin: 0;
+}

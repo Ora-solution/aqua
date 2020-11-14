@@ -1,0 +1,131 @@
+.pz-card-bar {
+    border: 1px solid #d8d8d8;
+    display: inline-block;
+    width: 100%;
+    padding: 4px 8px 8px 8px;
+    margin: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.pz-card-bar .pz-card-header {
+    padding-bottom: 4px;
+    line-height: 1.5rem;
+}
+
+.pz-card-bar .pz-card-header table {
+	width: 100%;
+	width: -moz-available;          /* WebKit-based browsers will ignore this. */
+	width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+	width: fill-available;
+	table-layout: fixed;
+}
+
+.pz-card-bar .pz-card-header .pz-card-title {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.pz-card-bar .pz-card-header .pz-card-value {
+    display: inline-block;
+    float: right;
+}
+
+@-webkit-keyframes pz-card-progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+@keyframes pz-card-progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+.pz-card-progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: .6rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #EEEEEE;
+    border-radius: .25rem;
+}
+
+.pz-card-progress-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #18a2dc;
+    -webkit-transition: width .6s ease;
+    transition: width .6s ease
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .pz-card-progress-bar {
+        -webkit-transition: none;
+        transition: none
+    }
+}
+
+.pz-card-progress-bar-striped {
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem
+}
+
+.pz-card-progress-bar-animated {
+    -webkit-animation: pz-card-progress-bar-stripes 1s linear infinite;
+    animation: pz-card-progress-bar-stripes 1s linear infinite
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .pz-card-progress-bar-animated {
+        -webkit-animation: none;
+        animation: none
+    }
+}
+
+.pz-card-progress .pz-card-progress-bar {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease
+}
+
+.pz-card-progress.progress-sm {
+    height: 6px
+}
+
+.pz-card-progress.progress-sm .pz-card-progress-bar {
+    border-radius: 3px
+}
+
+.pz-card-progress.progress-lg {
+    height: 20px
+}
+
+.pz-card-progress.progress-lg .pz-card-progress-bar {
+    border-radius: 4px
+}

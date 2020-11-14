@@ -1,0 +1,172 @@
+/*Apex Dynamic Tooltip*/
+#dynToolTip {
+    padding: 0px !important;
+    border-radius: 8px !important;
+}
+
+/* Profile sidebar */
+.pz-profile-sidebar {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 240px;
+  color: #555;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pz-profile-sidebar .profile-img-section {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background: #F5F5F5;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px 0px;
+}
+
+.pz-profile-sidebar .profile-userpic img {border: 1px solid rgb(221, 221, 221);border-radius: 50%;width: 128px;height: 128px;max-width: 100%;overflow-wrap: break-word;white-space: normal;position: absolute;left: 2px;top: 2px;background:white;}
+
+.pz-profile-sidebar .profile-userpic .img-border {
+    width: 134px;
+    height: 134px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 50%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    /*background: #EEEEEE;*/
+}
+
+.pz-profile-sidebar .profile-usertitle {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.pz-profile-sidebar .profile-usertitle-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pz-profile-sidebar .profile-usertitle-job {
+  /* text-transform: uppercase; */
+  color: #9E9E9E;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pz-profile-sidebar .profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pz-profile-sidebar .profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.pz-profile-sidebar .profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.pz-profile-sidebar .profile-usermenu table {
+  width: 100%;
+}
+
+.pz-profile-sidebar .profile-usermenu table td {
+  padding: 4px;
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.pz-profile-sidebar .profile-usermenu table td {
+  padding: 4px;
+  line-height: 26px;
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.pz-profile-sidebar .profile-usermenu table td.awn_tooltip {
+    width: 200px !important;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.pz-profile-sidebar .profile-usermenu table td.awn_tooltip > a {
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+}
+
+.pz-profile-sidebar .profile-usermenu table tr:last-child td {
+  border-bottom: none;
+}
+
+.pz-profile-sidebar .profile-usermenu table td .fa {
+  color: #777;
+  margin-left: 5px;
+}
+
+.pz-profile-sidebar .profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Profile Content */
+.pz-profile-sidebar .profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
+
+.pz-profile-sidebar .ranking > span {
+  width: 52px;
+  display: inline-block;
+  padding: 0px 4px;
+}
+
+.pz-profile-sidebar .ranking > span:nth-child(2) {
+  width: 65px;
+  border-right: 1px solid #ddd;
+}
+
+.pz-profile-sidebar .ranking > span:nth-child(4) {
+  width: 45px;
+}
+
+.pz-profile-sidebar .badge {
+    padding: 0px 6px;
+    border-radius: 4px;
+    float: right;
+    margin-top: -2px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.pz-profile-sidebar .badge.blue {
+    background: #eef7fb;
+    color: #404040;
+    border: 1px solid #00acc1;
+}
+
+.pz-profile-sidebar .badge.green {
+    background: #effbe1;
+    color: #404040;
+    border: 1px solid #7cb342;
+}
+
+.pz-profile-sidebar .profile-toolbar {
+    position: absolute;
+    padding: 4px 8px;
+    right: 0px;
+    top: 2px;
+}
+
+
+.pz-profile-sidebar .profile-toolbar .t-Button+.t-Button {
+    margin-left: -1px;
+}
