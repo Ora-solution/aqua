@@ -348,7 +348,7 @@ function AWNdisableEsc(event, ui){
   void(0);
 }
 
-function warnOnClose(event, ui){
+function warnOnCloseOLD(event, ui){
   //var noOfFrames = $(".ui-dialog.ui-dialog--apex").length;
   var noOfFrames = $('.ui-dialog.ui-dialog--apex:not([aria-describedby$="_MODAL"])').length;
   //var hasChange = apex.page.isChanged();
@@ -360,15 +360,33 @@ function warnOnClose(event, ui){
 	  var hasChange = false;
   }
  
-  if (hasChange && $v("P" + $v("pFlowStepId") + "_SUCCESSFULLY_PROCESSED") !== "Y") {
+  if (hasChange) {
     //var lMessage = apex.lang.getMessage( "APEX.WARN_ON_UNSAVED_CHANGES" );
-    var lMessage = "There are unsaved changes. Do you want to continue?";
+    var lMessage = "There are unsaved changes. Do you want to continue? - ";
     var ok = confirm(lMessage);
     if ( !ok ) {
       event.preventDefault();
     }
   }
   return hasChange;
+}
+
+function warnOnClose(event, ui) {
+
+    var apexiFrame = $(event.target).children().get(0).contentWindow.apex;
+    var triggeringElement = $(event.target).children().get(0).contentWindow.document.activeElement;
+    var submitbutton = $(triggeringElement).attr("onclick").indexOf("apex.submit") > -1 ? true : false;
+    var hasChange = apexiFrame.page.isChanged();
+
+    if (hasChange && !submitbutton) {
+        // var lMessage = apex.lang.getMessage( "APEX.WARN_ON_UNSAVED_CHANGES" );
+        var lMessage = "There are unsaved changes. Do you want to continue?";
+        var ok = confirm(lMessage);
+        if (!ok) {
+            event.preventDefault();
+        }
+    }
+    return hasChange;
 }
 
 function CloseModalWithWarning(event, ui) {
