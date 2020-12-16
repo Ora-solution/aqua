@@ -375,7 +375,8 @@ function warnOnClose(event, ui) {
 
     var apexiFrame = $(event.target).children().get(0).contentWindow.apex;
     var triggeringElement = $(event.target).children().get(0).contentWindow.document.activeElement;
-    var submitbutton = $(triggeringElement).attr("onclick").indexOf("apex.submit") > -1 ? true : false;
+    //var submitbutton = $(triggeringElement).attr("onclick").indexOf("apex.submit") > -1 ? true : false;
+	var submitbutton = $(triggeringElement).hasClass("js-ignoreChange");
     var hasChange = apexiFrame.page.isChanged();
 
     if (hasChange && !submitbutton) {
