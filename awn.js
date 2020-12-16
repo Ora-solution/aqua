@@ -371,7 +371,7 @@ function warnOnClose(event, ui){
   return hasChange;
 }
 
-function wrnOnCloseModal(event, ui) {
+function wrnOnCloseModal() {
     if (apex.page.isChanged()) {
         apex.message.confirm("There are unsaved changes. Do you want to continue?", function (okPressed) {
             if (okPressed) {
