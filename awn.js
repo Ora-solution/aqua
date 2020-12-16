@@ -371,6 +371,18 @@ function warnOnClose(event, ui){
   return hasChange;
 }
 
+function wrnOnCloseModal(event, ui) {
+    if (apex.page.isChanged()) {
+        apex.message.confirm("There are unsaved changes. Do you want to continue?", function (okPressed) {
+            if (okPressed) {
+                apex.navigation.dialog.close(true);
+            }
+        });
+    } else {
+        apex.navigation.dialog.close(true);
+    }
+}
+
 function removeIGbutton (button_name, regionID){
 	if (button_name=="action"){
 		$(regionID + ' .a-IG-header .a-Toolbar-group .a-Toolbar-item[id$="ig_toolbar_actions_button"]').parent().remove();
