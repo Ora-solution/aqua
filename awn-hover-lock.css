@@ -1,0 +1,40 @@
+/*
+<div id="contentlocker-overlay"><i class="fa fa-lock"></i>Unlock content with a secret code.</div>
+*/
+#contentlocker-overlay {
+    display: none;
+}
+
+.awn-hover-lock #contentlocker-overlay {
+    background-color: rgba(0,0,0,0.6);
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+	cursor: pointer;
+}
+.awn-hover-lock #contentlocker-overlay i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.awn-hover-lock #contentlocker-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    opacity: 1;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.awn-hover-lock:hover #contentlocker-overlay,
+.awn-hover-lock:focus-within #contentlocker-overlay {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.08s linear;
+}
