@@ -1,0 +1,103 @@
+.cir-avatar-container {
+	padding: 8px;
+}
+
+.cir-avatar-center .cir-avatar-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.cir-avatar-medium .cir-avatar-container .cir-avatar-wrapper {
+    display: inline-grid;
+    width: 55px;
+    margin: 8px;
+    text-align: center;
+}
+
+.cir-avatar-medium .cir-avatar-container .cir-avatar-wrapper .cir-avatar-img {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.cir-avatar-medium .cir-avatar-container .cir-avatar-wrapper .cir-avatar-name {
+    line-height: 12px;
+	font-weight: 500;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.cir-avatar-small .cir-avatar-container .cir-avatar-wrapper {
+    display: inline-grid;
+    width: 40px;
+    margin: 4px;
+    text-align: center;
+}
+
+.cir-avatar-small.cir-avatar-condensed .cir-avatar-container .cir-avatar-wrapper {
+	width: 25px;
+}
+
+.cir-avatar-small .cir-avatar-container .cir-avatar-wrapper .cir-avatar-img {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+}
+
+.cir-avatar-small .cir-avatar-container .cir-avatar-wrapper .cir-avatar-name {
+    line-height: 12px;
+    font-weight: 500;
+    overflow: hidden;
+    /* display: contents; */
+    white-space: nowrap;
+}
+
+.cir-avatar-small .cir-avatar-container .cir-avatar-wrapper .cir-avatar-name > small {
+	font-size: 8px;
+}
+
+.cir-avatar-container .cir-avatar-wrapper {
+	position: relative;
+}
+
+.cir-avatar-container .cir-avatar-wrapper .count {
+	position: absolute;
+	top: -8px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.cir-avatar-condensed .cir-avatar-container .cir-avatar-wrapper .count {
+	top: 53%;
+	right: 50%;
+}
+   
+.cir-avatar-container .cir-avatar-wrapper .count .num {
+	background: #00acc1;
+	opacity: .65;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	width: 14px;
+	height: 14px;
+	text-align: center;
+	line-height: 12px;
+	font-size: 9px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+	box-shadow: 0 1px 3px rgba(0,0,0,.25);
+	border: 1px solid rgba(70,70,70,.2);
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.cir-avatar-container a:hover .cir-avatar-wrapper .count .num {
+	opacity: 1;
+}
