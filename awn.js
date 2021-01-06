@@ -3,6 +3,8 @@ var lastProgram;
 var lastRowNum;
 var lastScrollPos;
 var vProgreeBarTimer;
+var vProgreeBarWaiting;
+var vProgreeBarRuningIndicator;
 var appUser = '&APP_USER.';
 
 function AWNsetPlaceholder ( p_itemname, p_value ) {
@@ -610,14 +612,37 @@ function preventEscapeRunningProcess(event, ui) {
     ok = confirm(lMessage);
 }
 
-function openAWNProgressBar() {
+function openAWNProgressBar(pIntervalTime) {
+	
+	var vIntervalTime = pIntervalTime;
+	
+	if (vIntervalTime) {
+		if (vIntervalTime < 200) {
+			vIntervalTime = 200;
+		} else if (vIntervalTime > 30000) {
+			vIntervalTime = 30000;
+		}
+	} else {vIntervalTime = 200;}
+	
 	if (!vProgreeBarTimer) {
 		apexProgressBar('P0_PROGRESS_BAR').clear();
 		apexProgressBar('P0_PROGRESS_BAR').show();
 
 		vProgreeBarTimer = setInterval(function() {
 			AWNcustomEvent('check-process-status');
-		}, 500);
+		}, vIntervalTime);
+		
+		vProgreeBarRuningIndicator = setInterval(function() {
+			if (vProgreeBarWaiting) {
+				if (vProgreeBarWaiting.toString().length > 9) {
+					vProgreeBarWaiting = ' .';
+				} else {
+					vProgreeBarWaiting += ' .';
+				}
+			} else {
+				vProgreeBarWaiting = ' .';
+			}
+		}, 1000);
 	}
 }
 
@@ -625,6 +650,8 @@ function closeAWNProgressBar(){
 	if (vProgreeBarTimer) {
 		clearInterval(vProgreeBarTimer);
 		vProgreeBarTimer = null;
+		vProgreeBarWaiting = null;
+		vProgreeBarRuningIndicator = null;
         AWNSetItemValue('P0_PROGRESS_VALUE', '0');
         AWNSetItemValue('P0_CURRENT_PROCESS', 'Initializing...:');
         apexProgressBar('P0_PROGRESS_BAR').hide();
