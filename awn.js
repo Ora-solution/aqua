@@ -649,6 +649,7 @@ function openAWNProgressBar(pIntervalTime) {
 function closeAWNProgressBar(){
 	if (vProgreeBarTimer) {
 		clearInterval(vProgreeBarTimer);
+		clearInterval(vProgreeBarRuningIndicator);
 		vProgreeBarTimer = null;
 		vProgreeBarWaiting = null;
 		vProgreeBarRuningIndicator = null;
