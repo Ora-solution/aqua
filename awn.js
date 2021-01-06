@@ -627,6 +627,7 @@ function openAWNProgressBar(pIntervalTime) {
 	if (!vProgreeBarTimer) {
 		apexProgressBar('P0_PROGRESS_BAR').clear();
 		apexProgressBar('P0_PROGRESS_BAR').show();
+		vProgreeBarWaiting = ' .';
 
 		vProgreeBarTimer = setInterval(function() {
 			AWNcustomEvent('check-process-status');
