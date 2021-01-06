@@ -650,13 +650,17 @@ function openAWNProgressBar(pIntervalTime) {
 function closeAWNProgressBar(){
 	if (vProgreeBarTimer) {
 		clearInterval(vProgreeBarTimer);
-		clearInterval(vProgreeBarRuningIndicator);
 		vProgreeBarTimer = null;
-		vProgreeBarWaiting = null;
-		vProgreeBarRuningIndicator = null;
-        AWNSetItemValue('P0_PROGRESS_VALUE', '0');
-        AWNSetItemValue('P0_CURRENT_PROCESS', 'Initializing...:');
-        apexProgressBar('P0_PROGRESS_BAR').hide();
-        apexProgressBar('P0_PROGRESS_BAR').clear();
 	}
+	
+	if (vProgreeBarRuningIndicator) {
+		clearInterval(vProgreeBarRuningIndicator);
+		vProgreeBarRuningIndicator = null;
+		vProgreeBarWaiting = null;
+	}
+	
+		AWNSetItemValue('P0_PROGRESS_VALUE', '0');
+		AWNSetItemValue('P0_CURRENT_PROCESS', 'Initializing...:');
+		apexProgressBar('P0_PROGRESS_BAR').hide();
+		apexProgressBar('P0_PROGRESS_BAR').clear();
 }
