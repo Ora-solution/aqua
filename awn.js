@@ -2,6 +2,7 @@ var waiting_icon;
 var lastProgram;
 var lastRowNum;
 var lastScrollPos;
+var vProgreeBarTimer;
 var appUser = '&APP_USER.';
 
 function AWNsetPlaceholder ( p_itemname, p_value ) {
@@ -607,4 +608,26 @@ function preventEscapeRunningProcess(event, ui) {
     var ok, cond_pass = true;
     var lMessage = "There are some background working in progress, it is recomanded to wait for completion of background process.";
     ok = confirm(lMessage);
+}
+
+function openAWNProgressBar() {
+	if (!vProgreeBarTimer) {
+		apexProgressBar('P0_PROGRESS_BAR').clear();
+		apexProgressBar('P0_PROGRESS_BAR').show();
+
+		vProgreeBarTimer = setInterval(function() {
+			AWNcustomEvent('check-process-status');
+		}, 500);
+	}
+}
+
+function closeAWNProgressBar(){
+	if (vProgreeBarTimer) {
+		clearInterval(vProgreeBarTimer);
+		vProgreeBarTimer = null;
+        AWNSetItemValue('P0_PROGRESS_VALUE', '0');
+        AWNSetItemValue('P0_CURRENT_PROCESS', 'Initializing...:');
+        apexProgressBar('P0_PROGRESS_BAR').hide();
+        apexProgressBar('P0_PROGRESS_BAR').clear();
+	}
 }
