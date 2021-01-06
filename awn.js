@@ -19,7 +19,7 @@ function AWNSetItemValue(p_itemname, p_value) {
     $( v_targetItemJQ ).val(p_value);
 
     // Save item session state and refresh Region
-    apex.server.process("dummy", {
+    apex.server.process("setSessionState", {
         pageItems: v_targetItemJQ
     }, {
         dataType: "text"
