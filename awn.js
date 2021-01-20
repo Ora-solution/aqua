@@ -257,7 +257,17 @@ function igSetNewRecordEvent (jqTrigElem, IG_StaticName) {
 	lastRowNum = 1000;
 	$(jqTrigElem).keydown(function(e) {
     var e = e || window.event; // for IE to cover IEs window object
-    var curRow = Number($('.a-GV-cell.igAllowNewRecord').closest("tr.is-selected").attr('data-id').substr(1, 4));
+	var rowID = [];
+	
+	try {
+	  rowID = jQuery.parseJSON($(".a-GV-cell.igAllowNewRecord").closest("tr.is-selected").attr("data-id"));
+	}
+	catch (err) {
+	  rowID.push($(".a-GV-cell.igAllowNewRecord").closest("tr.is-selected").attr("data-id"));
+	}
+	
+    //var curRow = Number($('.a-GV-cell.igAllowNewRecord').closest("tr.is-selected").attr('data-id').substr(1, 4));
+	var curRow = Number(rowID[rowID.length-1].substr(1, 4));
     if (!e.shiftKey && e.which == 9) {
         if (curRow >= lastRowNum) {
             igAddRecordLast(IG_StaticName);
