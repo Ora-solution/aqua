@@ -244,6 +244,15 @@ tr.selected td .edit_toolbar {
     background-color: rgba(255, 255, 255, 0.99) !important;
     border-color: #618daa !important;
 }
+
+.select2-dropdown {
+    min-width: fit-content;
+}
+
+.select2-dropdown .select2-results__options {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
 /*--------- END - Select 2 Plugin Setting ----------*/
 
 .text-left{text-align:left}
