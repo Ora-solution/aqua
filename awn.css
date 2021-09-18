@@ -441,6 +441,7 @@ ul.notifications.notificationstoggle {
 
 .awnIGBottomTotal {
   color: #4d4d4d;
+  margin: auto;
 }
 
 .ui-dialog.ui-dialog--apex[aria-describedby$="_MODAL"] {
