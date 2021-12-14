@@ -762,3 +762,10 @@ ul.notifications.notificationstoggle {
         margin-top: 14px;
         font-size: 22px;
 }
+
+.apex-item-select,
+.apex-item-text,
+.apex-item-textarea,
+.apex-item-multi {
+	backface-visibility: hidden;
+}
