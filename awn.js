@@ -546,23 +546,23 @@ function CallReport(pRptName, pRptPath, pRptType, paraList){
     
     // Add Report Name Comp and Unit
     if ($('#P0_S0002_ID').val()) {
-        url += '&P_S0002_ID=' + $('#P0_S0002_ID').val();
-        url += '&P_S0002_DESC=' + $('#P0_S0002_ID :selected').text();
+        url += '&P_S0002_ID=' + encodeURIComponent($('#P0_S0002_ID').val());
+        url += '&P_S0002_DESC=' + encodeURIComponent($('#P0_S0002_ID :selected').text());
     }
     
     if ($('#P0_S0003_ID').val()) {
-        url += '&P_S0003_ID=' + $('#P0_S0003_ID').val();
-        url += '&P_S0003_DESC=' + $('#P0_S0003_ID :selected').text();
+        url += '&P_S0003_ID=' + encodeURIComponent($('#P0_S0003_ID').val());
+        url += '&P_S0003_DESC=' + encodeURIComponent($('#P0_S0003_ID :selected').text());
     }
     
     if (pRptName !== "") {
-        url += '&P_REPORT_NAME=' + pRptName;
+        url += '&P_REPORT_NAME=' + encodeURIComponent(pRptName);
     }
     
     // Add List of Parameters
 	$.each(paraList, function(paramName, paramValue) {
 		if (paramValue !== "") {
-			url += '&' + paramName + '=' + paramValue;
+			url += '&' + paramName + '=' + encodeURIComponent(paramValue);
 		}
 	});
     
